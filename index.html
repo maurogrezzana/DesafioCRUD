@@ -52,24 +52,46 @@
             <div class="card m-auto" style="max-width: 300px">
               <form id="formulario">
                 <label for="inputTitulo">Titulo</label>
-                <input type="text" id="inputTitulo" required />
                 <br />
-                <label for="inputNota">Nota</label>
-                <input type="text" id="inputNota" required />
+                <input
+                  type="text"
+                  placeholder="(maximo 60 caracteres)"
+                  id="inputTitulo"
+                  maxlength="60"
+                  required
+                />
+                <br />
+                <div>
+                  <label for="inputNota">Nota</label>
+                  <br />
+                  <textarea
+                    type="text"
+                    placeholder="Cuerpo de nota (maximo 500 caracteres)"
+                    id="inputNota"
+                    cols="35"
+                    rows="10"
+                    maxlength="500"
+                    required
+                  ></textarea>
+                </div>
                 <br />
                 <label for="inputCategoria">Categoria</label>
+                <br />
                 <select id="inputCategoria" required>
                   <option>Propuesta</option>
                   <option>Trabajo final</option>
                 </select>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary btn-sm">
+                  Enviar
+                </button>
+                <br /><br />
               </form>
             </div>
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary btn-sm"
               data-bs-dismiss="modal"
             >
               Cerrar
