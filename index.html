@@ -16,26 +16,69 @@
   </head>
   <body>
     <div>
-      <h1 id="Titulo">Crear Nota</h1>
+      <h1 id="Titulo">DesafioCRUD</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Crear Nota
+      </button>
     </div>
 
-    <!--Formulario-->
-    <div class="card m-auto" style="max-width: 300px">
-      <form id="formulario">
-        <label for="inputTitulo">Titulo</label>
-        <input type="text" id="inputTitulo" required />
-        <br />
-        <label for="inputNota">Nota</label>
-        <input type="text" id="inputNota" required />
-        <br />
-        <label for="inputCategoria">Categoria</label>
-        <select id="inputCategoria" required>
-          <option>Propuesta</option>
-          <option>Trabajo final</option>
-        </select>
-        <button type="submit">Enviar</button>
-      </form>
+    <!--Modal-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Crear Nota</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!--Formulario-->
+            <div class="card m-auto" style="max-width: 300px">
+              <form id="formulario">
+                <label for="inputTitulo">Titulo</label>
+                <input type="text" id="inputTitulo" required />
+                <br />
+                <label for="inputNota">Nota</label>
+                <input type="text" id="inputNota" required />
+                <br />
+                <label for="inputCategoria">Categoria</label>
+                <select id="inputCategoria" required>
+                  <option>Propuesta</option>
+                  <option>Trabajo final</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <!--Tabla usuarios-->
     <div>
       <table class="table table-dark table-striped mt-5">
